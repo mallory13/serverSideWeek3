@@ -3,16 +3,48 @@
 //global variables
 //var missionStatement = "";
 //projects array
-var projects = "";
-var awards = "";
-var education = "";
-var skills = "";
-var volunteer = "";
-var work = "";
-var goals = "";
-var contact = "";
-var missionParagraph = "";
-var missionStatement = "";
+// var projects = "";
+//     var aandcParagraph = "";
+//     var albratrossParagraph = "";
+//     var beautieLoungeParagraph = "";
+
+
+
+
+// document.getElementById("projects").innerHTML = projects;
+// var projects = "";
+// var awards = "";
+//     var award1= "";
+//     var award2= "";
+//     var award3= "";
+//     var award4= "";
+//     var award5= "";
+// var education = "";
+//     var georgian = "";
+//     var georgian1 = "";
+//     var georgian2 = "";
+//     var georgian3 = "";
+//     var georgian4 = "";
+//     var delta = "";
+//     var delta1 = "";
+//     var ottawa = "";
+//     var ottawa1 = "";
+// var skills = "";
+//     var skill1 = "";
+//     var skill2 = "";
+//     var skill3 = "";
+//     var skill4 = "";
+//     var skill5 = "";
+//     var skill6 = "";
+// var volunteer = "";
+// var work = "";
+// var goals = "";
+// var goal1;
+//     var goal2 = "";
+//     var goal3 = "";
+// var contact = "";
+// var missionParagraph = "";
+// var missionStatement = "";
 
 
 
@@ -193,24 +225,38 @@ var missionStatement = "";
 
     }
     
-    // projects section
+    // projects section  
     function projects() {
         
-        console.log("inside projects function");
+        console.log("inside project function");
         var projects;
-        var aandcParagraph;
-        var albratrossParagraph;
-        var beautieLoungeParagraph;
-        
         projects = document.getElementById("projects");
-        projects.innerHTML = "Recent Projects: ";
+        projects.innerHTML = "Recent Projects:";
+
+    }
+    
+    function aandcProject() {
         
+        console.log("inside aandcProject function");
+        var aandcParagraph;
         aandcParagraph = document.getElementById("aandcParagraph");
         aandcParagraph.innerHTML = "This is the federal website for Aboriginal and Northern Development Canada. I worked with a team of programmers to update the website to current HTML5 and ensure all content was compliant to the Web Content Accessibility Guidelines.";
+
+    }
+    
+    function albatrossProject() {
         
+        console.log("inside albatrossProject function");
+        var albratrossParagraph;
         albratrossParagraph = document.getElementById("albratrossParagraph");
         albratrossParagraph.innerHTML = "The Albatross Motel is located near the main end in Wasaga Beach. This is a small business wordpress website currently being customized.";
+
+    }
+    
+    function beautieLoungeProject() {
         
+        console.log("inside contact function");
+        var beautieLoungeParagraph;
         beautieLoungeParagraph = document.getElementById("beautieLoungeParagraph");
         beautieLoungeParagraph.innerHTML = "A small business wordpress website for a local self employed beauty consultant and make up artist.";
 
@@ -225,25 +271,25 @@ var missionStatement = "";
 
     }
     
-    //needs to be completed
-    function branding() {
+    // //needs to be completed
+    // function branding() {
         
-        console.log("inside contact function");
-        var branding;
-        branding = document.getElementById("branding");
-        branding.innerHTML = "Branding information here";
+    //     console.log("inside contact function");
+    //     var branding;
+    //     branding = document.getElementById("branding");
+    //     branding.innerHTML = "Branding information here";
 
-    }
+    // }
     
-    //needs to be completed
-    function styleGuide() {
+    // //needs to be completed
+    // function styleGuide() {
         
-        console.log("inside styleGuide function");
-        var styleGuide;
-        styleGuide = document.getElementById("styleGuide");
-        styleGuide.innerHTML = "Style guide information here";
+    //     console.log("inside styleGuide function");
+    //     var styleGuide;
+    //     styleGuide = document.getElementById("styleGuide");
+    //     styleGuide.innerHTML = "Style guide information here";
 
-    }
+    // }
     //declare anonymous function with named alias
     /*
     var replaceFirstParagraph = function(){
@@ -261,12 +307,15 @@ missionStatement();
 awards();
 education();
 skills();
-volunteer();
+// volunteer();
 goals();
 projects();
+albatrossProject();
+aandcProject();
+beautieLoungeProject();
 contact();
-branding();
-styleGuide();
+// branding();
+// styleGuide();
 
 
 })();
