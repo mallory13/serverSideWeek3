@@ -32,7 +32,7 @@
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right navbar-inverse nav-pills">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="projects.html">Recent Projects</a></li>
                     <li class="dropdown">
@@ -65,23 +65,39 @@
 
         <h1>My Portfolio</h1>
         <h2>Contact Me!</h2>
+        
         <form action="" method="post" enctype="multipart/form-data">
          <fieldset>
+             <div class="input-group">
             <label for="name">First Name:</label>
-            <input type="text" id="firstName" name="first name" placeholder="Enter your first name" />
+            <input type="text" id="firstName" class="form-control" name="first name" placeholder="Enter your first name" />
             <br />
+            </div>
+            
+            <div class="input-group input-group-lg">
             <label for="name">Last Name:</label>
-            <input type="text" id="lastName" name="last name" placeholder="Enter your last name" />
+            <input type="text" id="lastName" class="form-control" name="last name" placeholder="Enter your last name" />
             <br />
+            </div>
+            
+            <div class="input-group">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email address" />
+            <input type="email" id="email" class="form-control" name="email" placeholder="Enter your email address" />
             <br />
+            </div>
+            
+            <div class="input-group">
             <label for="message">Message:</label>
-            <textarea id="message" name="message" placeholder="Enter a message"></textarea>
+            <textarea id="message" name="message" class="form-control" placeholder="Enter a message"></textarea>
             <br />
-            <input type="submit" value="Submit" />
+            </div>
+            
+            <div class="input-group">
+            <input type="submit" class="form-control" value="Submit" />
+            </div>
          </fieldset>
       </form>
+        
 
     </main>
     <!--javascript section-->
