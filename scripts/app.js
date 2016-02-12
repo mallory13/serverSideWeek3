@@ -23,6 +23,68 @@ var projects = "";
 
     }
     
+    function missionStatement() {
+        
+        console.log("inside replaceFirstParagraph function");
+        var missionStatement;
+        missionStatement = document.getElementById("missionStatement");
+        missionStatement.innerHTML = "My new paragraph data";
+
+    }
+    
+    function awards() {
+        
+        console.log("inside replaceFirstParagraph function");
+        var awards;
+        awards = document.getElementById("awards");
+        awards.innerHTML = "My new paragraph data";
+
+    }
+    
+    function education() {
+        
+        console.log("inside replaceFirstParagraph function");
+        var education;
+        education = document.getElementById("education");
+        education.innerHTML = "My new paragraph data";
+
+    }
+    
+    function skills() {
+        
+        console.log("inside replaceFirstParagraph function");
+        var skills;
+        skills = document.getElementById("skills");
+        skills.innerHTML = "My new paragraph data";
+
+    }
+    
+    function volunteer() {
+        
+        console.log("inside replaceFirstParagraph function");
+        var volunteer;
+        volunteer = document.getElementById("volunteer");
+        volunteer.innerHTML = "My new paragraph data";
+
+    }
+    
+    function work() {
+        
+        console.log("inside replaceFirstParagraph function");
+        var work;
+        work = document.getElementById("work");
+        work.innerHTML = "My new paragraph data";
+
+    }
+    
+    function contact() {
+        
+        console.log("inside replaceFirstParagraph function");
+        var contact;
+        contact = document.getElementById("contact");
+        contact.innerHTML = "My new paragraph data";
+
+    }
     //declare anonymous function with named alias
     /*
     var replaceFirstParagraph = function(){
