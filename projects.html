@@ -34,7 +34,8 @@
                     <span class="icon-bar"></span>
                 </button>
                 <!--fix logo image-->
-                <a class="navbar-brand nav navbar-left" href="index.html"><img src="images/logo.png" alt="steele suites logo" height="100" width="100"/></i></a>
+                <a class="navbar-brand nav navbar-left" href="index.html"><img src="images/logo.png" alt="steele suites logo" height="100" width="100" /></i>
+                </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -43,8 +44,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li class="active"><a href="projects.html">Recent Projects</a></li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" 
-                        aria-expanded="false">About Me<span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Me<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="skills.html">Skills</a></li>
                             <li><a href="goals.html">Goals</a></li>
@@ -73,18 +73,50 @@
 
         <h1>My Portfolio</h1>
         <h2 id="projects"></h2>
-        <h3>Aboriginal and Northern Development Canada</h3>
-        <img src="./images/aandc.png" alt="aboriginal and northern development home page" id="aandc" height="100" width="100"/>
-        <p id="aandcParagraph"></p>
-        
-        <h3>Albatross Motel</h3>
-        <img src="./images/albatross.png" alt="albatross motel home page" id="albatross" height="100" width="100"/>
-        <p id="albatrossParagraph"></p>
-        
-        <h3>The Beautie Lounge</h3>
-        <img src="./images/jess.png" alt="the beautie lounge home page" id="beautieLounge" height="100" width="100"/>
-        <p id="beautieLoungeParagraph"></p>
 
+        <div class="well well-lg">
+            <div class="row">
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="./images/aandc.png" alt="aboriginal and northern development home page" id="aandc" height="200" width="300" />
+                        <div class="caption">
+                            <h3>AANDC</h3>
+                            <p id="aandcParagraph"></p>
+                            <p><a href="https://www.aadnc-aandc.gc.ca/eng/1100100010002/1100100010021" class="btn btn-primary"
+                                role="button">Visit Website</a>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="./images/albatross.png" alt="albatross motel home page" id="albatross" height="200" width="300" />
+                        <div class="caption">
+                            <h3>Albatross Motel</h3>
+                            <p id="albatrossParagraph"></p>
+                            <p><a href="https://www.albatrossmotel.ca" class="btn btn-primary" role="button">Visit Website</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-4">
+                    <div class="thumbnail">
+                        <img src="./images/jess.png" alt="the beautie lounge home page" id="beautieLounge" height="200" width="300" />
+                        <div class="caption">
+                            <h3>The Beautie Lounge</h3>
+                            <p id="beautieLoungeParagraph"></p>
+                            <p><a href="https://www.thebeautielounge.com" class="btn btn-primary" role="button">Visit Website</a>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <!--javascript section-->
     <script src="scripts/lib/jquery-2.2.0.min.js"></script>
