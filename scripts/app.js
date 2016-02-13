@@ -1,321 +1,96 @@
 "use strict";
 
-//global variables
-//var missionStatement = "";
-//projects array
-// var projects = "";
-//     var aandcParagraph = "";
-//     var albratrossParagraph = "";
-//     var beautieLoungeParagraph = "";
 
 
-
-
-// document.getElementById("projects").innerHTML = projects;
-// var projects = "";
-// var awards = "";
-//     var award1= "";
-//     var award2= "";
-//     var award3= "";
-//     var award4= "";
-//     var award5= "";
-// var education = "";
-//     var georgian = "";
-//     var georgian1 = "";
-//     var georgian2 = "";
-//     var georgian3 = "";
-//     var georgian4 = "";
-//     var delta = "";
-//     var delta1 = "";
-//     var ottawa = "";
-//     var ottawa1 = "";
-// var skills = "";
-//     var skill1 = "";
-//     var skill2 = "";
-//     var skill3 = "";
-//     var skill4 = "";
-//     var skill5 = "";
-//     var skill6 = "";
-// var volunteer = "";
-// var work = "";
-// var goals = "";
-// var goal1;
-//     var goal2 = "";
-//     var goal3 = "";
-// var contact = "";
-// var missionParagraph = "";
-// var missionStatement = "";
-
-
-
-//iife immediately invoked function expression
-//annonymous self executed functions
 (function () {
-    //code block being called by this function
-    console.log("App started...");
-    
-    //named function way
-    // function replaceFirstParagraph() {
-        
-    //     console.log("inside replaceFirstParagraph function");
-    //     var firstParagraph;
-    //     firstParagraph = document.getElementById("firstParagraph");
-    //     firstParagraph.innerHTML = "My new paragraph data";
+    var menu = '<div class="container-fluid"><-- Brand and toggle get grouped for better mobile display --> <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand nav navbar-left" href="index.html"><img src="images/logo.png" alt="steele suites logo" height="100" width="100"/></i></a> </div><!-- Collect the nav links, forms, and other content for toggling --><div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"><ul class="nav navbar-nav navbar-right navbar-inverse nav-pills"><li><a href="index.html">Home</a></li><li><a href="projects.html">Recent Projects</a></li> <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Me<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="skills.html">Skills</a></li><li><a href="goals.html">Goals</a></li><li class="active"><a href="education.html">Education</a></li><!--<li><a href="work.html">Work History</a></li>--><li><a href="awards.html">Accomplishments</a></li><!--<li><a href="volunteer.html">Volunteer Work</a></li>--><li role="separator" class="divider"></li><li><a href="#">Separated link</a></li></ul></li><li><a href="contact.html">Contact Me</a></li><li role="separator" class="divider"></li></ul></div><!-- /.navbar-collapse --></div><!-- /.container-fluid -->';
+    document.getElementById('global-navigation').innerHTML = menu;
+    var filePath = location.pathname;
+    filePath = filePath.substring(filePath.lastIndexOf('/') + 1, filePath.lastIndexOf('.'));
+    console.log(filePath);
+    switch (filePath) {
 
-    // }
-    
-    
-    // mission statement section
-    function missionStatement() {
-        
-        console.log("inside missionStatement function");
-        var missionStatement;
-        var missionParagraph;
-        missionStatement = document.getElementById("missionStatement");
-        missionStatement.innerHTML = "Mission Statement:";
-        
-        missionParagraph = document.getElementById("missionParagraph");
-        missionParagraph.innerHTML = "I am currently a web accessibility consultant for the Ministry of Education. My professional mission is to strive to be a life long learner and continually develop a variety of skills. I will seek and take advantage of opportunities to gain experience in the web development industry as well as confront and learn from every challenge presented in the process. I will continue to expand my portfolio while creating and maintaining positive personal and working relationships.";
+        case 'skills':
+            (function skills() {
+                console.log("inside skills function");
+                var skills, skill1, skill2, skill3, skill4, skill5, skill6;
 
+                document.getElementById("skills").innerHTML = "Skills:";
+                document.getElementById("skill1").innerHTML = "Ability to work with others as a team player towards a common goal";
+                document.getElementById("skill2").innerHTML = "Excellent written and verbal communication skills with an eye for detail";
+                document.getElementById("skill3").innerHTML = "Positive and accommodating personality";
+                document.getElementById("skill4").innerHTML = "Ambitious to take initiative and continue learning";
+                document.getElementById("skill5").innerHTML = "Efficient at multi-tasking and problem solving";
+                document.getElementById("skill6").innerHTML = "Experience in a leadership role as well as a mentorship program exercised in the workplace.";
+            })();
+
+        case 'education':
+            (function education() {
+
+                console.log("inside education function");
+                var education, georgian, georgian1, georgian2, georgian3, georgian4, delta, delta1, ottawa, ottawa1;
+
+                document.getElementById("education").innerHTML = "Education:";
+                document.getElementById("georgian").innerHTML = "Georgian College:";
+                document.getElementById("georgian1").innerHTML = "Interactive Web Design and Development - Current";
+                document.getElementById("georgian2").innerHTML = "Computer Programmer - 2015";
+                document.getElementById("georgian3").innerHTML = "Computer Programmer - 2015";
+                document.getElementById("georgian4").innerHTML = "Bartending 101 - 2005";
+                document.getElementById("delta").innerHTML = "Delta Training Program:";
+                document.getElementById("delta1").innerHTML = "Introduction to Management - 2009";
+                document.getElementById("ottawa").innerHTML = "University of Ottawa:";
+                document.getElementById("ottawa1").innerHTML = "Journalism - 2006";
+
+            })();
+        case 'index':
+            (function mission() {
+
+                console.log("inside missionStatement function");
+                var missionStatement, missionParagraph;
+                document.getElementById("missionStatement").innerHTML = "Mission Statement:";
+                document.getElementById("missionParagraph").innerHTML = "I am currently a web accessibility consultant for the Ministry of Education. My professional mission is to strive to be a life long learner and continually develop a variety of skills. I will seek and take advantage of opportunities to gain experience in the web development industry as well as confront and learn from every challenge presented in the process. I will continue to expand my portfolio while creating and maintaining positive personal and working relationships.";
+            })();
+        case 'goals':
+            (function goals() {
+
+                console.log("inside goals function");
+                var goals, goal1, goal2, goal3;
+
+                document.getElementById("goals").innerHTML = "Goals:";
+                document.getElementById("goal1").innerHTML = "Travel the world";
+                document.getElementById("goal2").innerHTML = "Retire at age 40";
+                document.getElementById("goal3").innerHTML = "Volunteer abroad";
+
+
+            })();
+        case 'projects':
+            (function projects() {
+
+                console.log("inside project function");
+                var projects, aandcParagraph, albratrossParagraph;
+                document.getElementById("projects").innerHTML = "Recent Projects:";
+                document.getElementById("aandcParagraph").innerHTML = "This is the federal website for Aboriginal and Northern Development Canada. I worked with a team of programmers to update the website to current HTML5 and ensure all content was compliant to the Web Content Accessibility Guidelines.";
+                document.getElementById("albratrossParagraph").innerHTML = "The Albatross Motel is located near the main end in Wasaga Beach. This is a small business wordpress website currently being customized.";
+                document.getElementById("beautieLoungeParagraph").innerHTML = "A small business wordpress website for a local self employed beauty consultant and make up artist.";
+            })();
+
+        case 'awards':
+            (function () {
+                console.log("inside awards function");
+
+                var awards, award1, award2, award3, award4, award5;
+                document.getElementById("awards").innerHTML = "Accomplishments:";
+                document.getElementById("award1").innerHTML = "IBM’s Master the Mainframe Part 1 Winner";
+                document.getElementById("award2").innerHTML = "Dean’s Council Computer Programmer Representative";
+                document.getElementById("award3").innerHTML = "People’s Choice Award at the Georgian College Innovation Showcase";
+                document.getElementById("award4").innerHTML = "IBM’s Choice Award at the Georgian College Innovation Showcase";
+                document.getElementById("award5").innerHTML = "Dean’s List";
+
+            })();
+            break;
+        default:
     }
-    
-    
-    // accomplishments section
-    function awards() {
-        
-        console.log("inside awards function");
-        var awards;
-        var award1;
-        var award2;
-        var award3;
-        var award4;
-        var award5;
-        awards = document.getElementById("awards");
-        awards.innerHTML = "Accomplishments:";
-        
-        award1 = document.getElementById("award1");
-        award1.innerHTML = "IBM’s Master the Mainframe Part 1 Winner";
-        
-        award2 = document.getElementById("award2");
-        award2.innerHTML = "Dean’s Council Computer Programmer Representative";
-        
-        award3 = document.getElementById("award3");
-        award3.innerHTML = "People’s Choice Award at the Georgian College Innovation Showcase";
-        
-        award4 = document.getElementById("award4");
-        award4.innerHTML = "IBM’s Choice Award at the Georgian College Innovation Showcase";
-        
-        award5 = document.getElementById("award5");
-        award5.innerHTML = "Dean’s List";
-
-    }
-    
-    // education section
-    function education() {
-        
-        console.log("inside education function");
-        var education;
-        var georgian;
-        var georgian1;
-        var georgian2;
-        var georgian3;
-        var georgian4;
-        var delta;
-        var delta1;
-        var ottawa;
-        var ottawa1;
-        
-        education = document.getElementById("education");
-        education.innerHTML = "Education:";
-        
-        georgian = document.getElementById("georgian");
-        georgian.innerHTML = "Georgian College:";
-        
-        georgian1 = document.getElementById("georgian1");
-        georgian1.innerHTML = "Interactive Web Design and Development - Current";
-        
-        georgian2 = document.getElementById("georgian2");
-        georgian2.innerHTML = "Computer Programmer - 2015";
-        
-        georgian3 = document.getElementById("georgian3");
-        georgian3.innerHTML = "Work Smart Certificate - 2013";
-        
-        georgian4 = document.getElementById("georgian4");
-        georgian4.innerHTML = "Bartending 101 - 2005";
-        
-        delta = document.getElementById("delta");
-        delta.innerHTML = "Delta Training Program:";
-        
-        delta1 = document.getElementById("delta1");
-        delta1.innerHTML = "Introduction to Management - 2009";
-        
-        ottawa = document.getElementById("ottawa");
-        ottawa.innerHTML = "University of Ottawa:";
-        
-        ottawa1 = document.getElementById("ottawa1");
-        ottawa1.innerHTML = "Journalism - 2006";
-
-    }
-    
-    // skills section
-    function skills() {
-        
-        console.log("inside skills function");
-        var skills;
-        var skill1;
-        var skill2;
-        var skill3;
-        var skill4;
-        var skill5;
-        var skill6;
-        skills = document.getElementById("skills");
-        skills.innerHTML = "Skills:";
-        
-        skill1 = document.getElementById("skill1");
-        skill1.innerHTML = "Ability to work with others as a team player towards a common goal";
-        
-        skill2 = document.getElementById("skill2");
-        skill2.innerHTML = "Excellent written and verbal communication skills with an eye for detail";
-        
-        skill3 = document.getElementById("skill3");
-        skill3.innerHTML = "Positive and accommodating personality";
-        
-        skill4 = document.getElementById("skill4");
-        skill4.innerHTML = "Ambitious to take initiative and continue learning";
-        
-        skill5 = document.getElementById("skill5");
-        skill5.innerHTML = "Efficient at multi-tasking and problem solving";
-        
-        skill6 = document.getElementById("skill6");
-        skill6.innerHTML = "Experience in a leadership role as well as a mentorship program exercised in the workplace.";
-
-    }
-    
-    //needs to be completed
-    function volunteer() {
-        
-        console.log("inside volunteer function");
-        var volunteer;
-        volunteer = document.getElementById("volunteer");
-        volunteer.innerHTML = "Volunteer information here";
-
-    }
-    
-   
-    // goals section
-    function goals() {
-        
-        console.log("inside goals function");
-        var goals;
-        var goal1;
-        var goal2;
-        var goal3;
-        
-        goals = document.getElementById("goals");
-        goals.innerHTML = "Goals:";
-        
-        goal1 = document.getElementById("goal1");
-        goal1.innerHTML = "Travel the world";
-        
-        goal2 = document.getElementById("goal2");
-        goal2.innerHTML = "Retire at age 40";
-        
-        goal3 = document.getElementById("goal3");
-        goal3.innerHTML = "Volunteer abroad";
-
-    }
-    
-    // projects section  
-    function projects() {
-        
-        console.log("inside project function");
-        var projects;
-        projects = document.getElementById("projects");
-        projects.innerHTML = "Recent Projects:";
-
-    }
-    
-    function aandcProject() {
-        
-        console.log("inside aandcProject function");
-        var aandcParagraph;
-        aandcParagraph = document.getElementById("aandcParagraph");
-        aandcParagraph.innerHTML = "This is the federal website for Aboriginal and Northern Development Canada. I worked with a team of programmers to update the website to current HTML5 and ensure all content was compliant to the Web Content Accessibility Guidelines.";
-
-    }
-    
-    function albatrossProject() {
-        
-        console.log("inside albatrossProject function");
-        var albratrossParagraph;
-        albratrossParagraph = document.getElementById("albratrossParagraph");
-        albratrossParagraph.innerHTML = "The Albatross Motel is located near the main end in Wasaga Beach. This is a small business wordpress website currently being customized.";
-
-    }
-    
-    function beautieLoungeProject() {
-        
-        console.log("inside contact function");
-        var beautieLoungeParagraph;
-        beautieLoungeParagraph = document.getElementById("beautieLoungeParagraph");
-        beautieLoungeParagraph.innerHTML = "A small business wordpress website for a local self employed beauty consultant and make up artist.";
-
-    }
-    
-    function contact() {
-        
-        console.log("inside contact function");
-        var contact;
-        contact = document.getElementById("contact");
-        contact.innerHTML = "Contact Me:";
-
-    }
-    
-    // //needs to be completed
-    // function branding() {
-        
-    //     console.log("inside contact function");
-    //     var branding;
-    //     branding = document.getElementById("branding");
-    //     branding.innerHTML = "Branding information here";
-
-    // }
-    
-    // //needs to be completed
-    // function styleGuide() {
-        
-    //     console.log("inside styleGuide function");
-    //     var styleGuide;
-    //     styleGuide = document.getElementById("styleGuide");
-    //     styleGuide.innerHTML = "Style guide information here";
-
-    // }
-    //declare anonymous function with named alias
-    /*
-    var replaceFirstParagraph = function(){
-        var firstParagraph;
-        
-        firstParagraph = document.getElementByID("first paragraph");
-        firstParagraph.innerHTML = "first para data";
-        
-    };
-*/
-
-
-//call the functions
-missionStatement();
-awards();
-education();
-skills();
-// volunteer();
-goals();
-projects();
-albatrossProject();
-aandcProject();
-beautieLoungeProject();
-contact();
-// branding();
-// styleGuide();
 
 
 })();
+
