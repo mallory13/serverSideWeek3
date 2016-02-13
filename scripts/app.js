@@ -1,6 +1,11 @@
 "use strict";
 
 
+    // Steele Portfolio
+    // @author: Mallory Steele
+    // Assignment 1
+    
+
 
 (function () {
     var menu = '<div class="container-fluid"><-- Brand and toggle get grouped for better mobile display --> <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand nav navbar-left" href="index.html"><img src="images/logo.png" alt="steele suites logo" height="100" width="100"/></i></a> </div><!-- Collect the nav links, forms, and other content for toggling --><div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"><ul class="nav navbar-nav navbar-right navbar-inverse nav-pills"><li><a href="index.html">Home</a></li><li><a href="projects.html">Recent Projects</a></li> <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Me<span class="caret"></span></a><ul class="dropdown-menu"><li><a href="skills.html">Skills</a></li><li><a href="goals.html">Goals</a></li><li class="active"><a href="education.html">Education</a></li><!--<li><a href="work.html">Work History</a></li>--><li><a href="awards.html">Accomplishments</a></li><!--<li><a href="volunteer.html">Volunteer Work</a></li>--><li role="separator" class="divider"></li><li><a href="#">Separated link</a></li></ul></li><li><a href="contact.html">Contact Me</a></li><li role="separator" class="divider"></li></ul></div><!-- /.navbar-collapse --></div><!-- /.container-fluid -->';
@@ -23,6 +28,7 @@
                 document.getElementById("skill5").innerHTML = "Efficient at multi-tasking and problem solving";
                 document.getElementById("skill6").innerHTML = "Experience in a leadership role as well as a mentorship program exercised in the workplace.";
             })();
+            break;
 
         case 'education':
             (function education() {
@@ -42,6 +48,7 @@
                 document.getElementById("ottawa1").innerHTML = "Journalism - 2006";
 
             })();
+            break;
         case 'index':
             (function mission() {
 
@@ -50,6 +57,7 @@
                 document.getElementById("missionStatement").innerHTML = "Mission Statement:";
                 document.getElementById("missionParagraph").innerHTML = "I am currently a web accessibility consultant for the Ministry of Education. My professional mission is to strive to be a life long learner and continually develop a variety of skills. I will seek and take advantage of opportunities to gain experience in the web development industry as well as confront and learn from every challenge presented in the process. I will continue to expand my portfolio while creating and maintaining positive personal and working relationships.";
             })();
+            break;
         case 'goals':
             (function goals() {
 
@@ -63,17 +71,18 @@
 
 
             })();
+            break;
         case 'projects':
             (function projects() {
 
                 console.log("inside project function");
-                var projects, aandcParagraph, albratrossParagraph;
+                var projects, aandcParagraph, albratrossParagraph, beautieLoungeParagraph;
                 document.getElementById("projects").innerHTML = "Recent Projects:";
                 document.getElementById("aandcParagraph").innerHTML = "This is the federal website for Aboriginal and Northern Development Canada. I worked with a team of programmers to update the website to current HTML5 and ensure all content was compliant to the Web Content Accessibility Guidelines.";
                 document.getElementById("albratrossParagraph").innerHTML = "The Albatross Motel is located near the main end in Wasaga Beach. This is a small business wordpress website currently being customized.";
                 document.getElementById("beautieLoungeParagraph").innerHTML = "A small business wordpress website for a local self employed beauty consultant and make up artist.";
             })();
-
+break;
         case 'awards':
             (function () {
                 console.log("inside awards function");
