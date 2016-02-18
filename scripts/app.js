@@ -97,60 +97,72 @@
 
             })();
             break;
+        case 'contact':
+            
+    
+            //save the button to a variable
+            var submit = document.getElementById("submit");
+                
+   
+    
+            //add click event listener to the submit button
+                
+            submit.addEventListener("click", function (event) {
+
+                var firstName = document.getElementById("firstName").value;
+                var lastName = document.getElementById("lastName").value;
+                var email = document.getElementById("email").value;
+                var message = document.getElementById("message").value;
+                console.log(firstName);
+                
+                event.preventDefault();
+                console.log('First Name: ' + firstName + '\n' + 'Last Name: ' + lastName + '\n' + 'Email:' + email + '\n' + 'Message: ' + message + '\n');
+
+            }, false);
+
+
+            break;
         default:
     }
+
 
 
 })();
 
 
 //check that form input is valid
-function validateForm() {
-    var fname = document.forms["contactForm"]["fname"].value;
-    var lname = document.forms["contactForm"]["lname"].value;
-    var email = document.forms["contactForm"]["email"].value;
-    var message = document.forms["contactForm"]["lname"].value;
+// function validateForm() {
+//     var fname = document.forms["contactForm"]["fname"].value;
+//     var lname = document.forms["contactForm"]["lname"].value;
+//     var email = document.forms["contactForm"]["email"].value;
+//     var message = document.forms["contactForm"]["lname"].value;
 
-    if (fname == null || fname == "") {
-        alert("First name must be filled out");
-        return false;
-    }
+//     if (fname == null || fname == "") {
+//         alert("First name must be filled out");
+//         return false;
+//     }
 
-    if (lname == null || lname == "") {
-        alert("Last name must be filled out");
-        return false;
-    }
+//     if (lname == null || lname == "") {
+//         alert("Last name must be filled out");
+//         return false;
+//     }
 
-    if (email == null || email == "") {
-        alert("You must enter a valid email address");
-        return false;
-    }
+//     if (email == null || email == "") {
+//         alert("You must enter a valid email address");
+//         return false;
+//     }
 
-    if (message == null || message == "") {
-        alert("You must enter a message");
-        return false;
-    }
-    else {
-        return true;
-    }
-};
+//     if (message == null || message == "") {
+//         alert("You must enter a message");
+//         return false;
+//     }
+//     else {
+//         return true;
+//     }
+// };
 
 
 
-(function(){
-    
-    //save the button to a variable
-    var submit = document.getElementById("submit");
-    var firstName = document.getElementById('firstName').value;
-    var lastName = document.getElementById('lastName').value;
-    var email = document.getElementById('email').value;
-    var message = document.getElementById('message').value;
-    
-    //attach a click listener to the button
-    submit.addEventListener("click", function(){
-        
-            console.log('First Name: ' + firstName + '\n' + 'Last Name: ' + lastName + '\n' + 'Email:' + email + '\n' + 'Message: ' + message + '\n');
-        
-    }, false);
-})();
+
+
 
