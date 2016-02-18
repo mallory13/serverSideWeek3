@@ -1,9 +1,9 @@
 "use strict";
 
 
-    // Steele Portfolio
-    // @author: Mallory Steele
-    // Assignment 1
+// Steele Portfolio
+// @author: Mallory Steele
+// Assignment 1
     
 
 
@@ -82,7 +82,7 @@
                 document.getElementById("albratrossParagraph").innerHTML = "The Albatross Motel is located near the main end in Wasaga Beach. This is a small business wordpress website currently being customized.";
                 document.getElementById("beautieLoungeParagraph").innerHTML = "A small business wordpress website for a local self employed beauty consultant and make up artist.";
             })();
-break;
+            break;
         case 'awards':
             (function () {
                 console.log("inside awards function");
@@ -101,5 +101,56 @@ break;
     }
 
 
+})();
+
+
+//check that form input is valid
+function validateForm() {
+    var fname = document.forms["contactForm"]["fname"].value;
+    var lname = document.forms["contactForm"]["lname"].value;
+    var email = document.forms["contactForm"]["email"].value;
+    var message = document.forms["contactForm"]["lname"].value;
+
+    if (fname == null || fname == "") {
+        alert("First name must be filled out");
+        return false;
+    }
+
+    if (lname == null || lname == "") {
+        alert("Last name must be filled out");
+        return false;
+    }
+
+    if (email == null || email == "") {
+        alert("You must enter a valid email address");
+        return false;
+    }
+
+    if (message == null || message == "") {
+        alert("You must enter a message");
+        return false;
+    }
+    else {
+        return true;
+    }
+};
+
+
+
+(function(){
+    
+    //save the button to a variable
+    var submit = document.getElementById("submit");
+    var firstName = document.getElementById('firstName').value;
+    var lastName = document.getElementById('lastName').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
+    
+    //attach a click listener to the button
+    submit.addEventListener("click", function(){
+        
+            console.log('First Name: ' + firstName + '\n' + 'Last Name: ' + lastName + '\n' + 'Email:' + email + '\n' + 'Message: ' + message + '\n');
+        
+    }, false);
 })();
 
