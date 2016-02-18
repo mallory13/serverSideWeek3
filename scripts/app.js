@@ -76,10 +76,10 @@
             (function projects() {
 
                 console.log("inside project function");
-                var projects, aandcParagraph, albratrossParagraph, beautieLoungeParagraph;
+                var projects, aandcParagraph, albatrossParagraph, beautieLoungeParagraph;
                 document.getElementById("projects").innerHTML = "Recent Projects:";
                 document.getElementById("aandcParagraph").innerHTML = "This is the federal website for Aboriginal and Northern Development Canada. I worked with a team of programmers to update the website to current HTML5 and ensure all content was compliant to the Web Content Accessibility Guidelines.";
-                document.getElementById("albratrossParagraph").innerHTML = "The Albatross Motel is located near the main end in Wasaga Beach. This is a small business wordpress website currently being customized.";
+                document.getElementById("albatrossParagraph").innerHTML = "The Albatross Motel is located near the main end in Wasaga Beach. This is a small business wordpress website currently being customized.";
                 document.getElementById("beautieLoungeParagraph").innerHTML = "A small business wordpress website for a local self employed beauty consultant and make up artist.";
             })();
             break;
