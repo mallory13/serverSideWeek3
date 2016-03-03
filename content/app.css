@@ -30,13 +30,17 @@ main{
     /*background: linear-gradient(to bottom, rgba(252,255,244,1) 0%,rgba(223,229,215,1) 35%,rgba(84,85,147,1) 100%);
     background-repeat: no-repeat;*/
     
-    background-color: #00cc92;
-   
+   background-color: #00cc92;
+   padding: 2%;
+   margin-bottom: -142px;
+   clear: both;
     
 }
 
-
-
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
 
 
 /* mouse over link */
@@ -57,6 +61,7 @@ h1, h2, h3{
 
 h1{
     font-size: 48px;
+    font-family: 'Comic Sans', Arial, Helvetica, sans-serif;
 }
 
 h2{
@@ -69,6 +74,46 @@ p{
 ul{
     color: #d24135;
 }
-/*img{
+
+footer {
+    
+    clear: both;
+    background-color: #1F2124;
+    text-align: center;
+    height: 80px;
+    position: fixed;
+    left:10%;
+    bottom:0px;
+    height:40px;
+    width:80%;
+
+}
+
+/*p.social {
+    position: absolute;
+    position: fixed;
+    margin: 0;
+    top: -20px;
+    right: 0;
+    z-index: 200;
+	font-family: socialicoregular;
+	font-size: 60px;
+	color: white;
+	background-color: rgba(0,0,0,0.7);
+	height: 100px;
+	width: 250px;
+	padding: 10px;
+	text-align: center;
+   
+    
+
+}
+img{
     clear: both;
 }*/
+
+.nav-bar .home a { background:url("images/home.svg") no-repeat 0px -2px transparent; }
+.nav-bar .projects a { background:url("images/projects.svg") no-repeat 0px -2px transparent; }
+.nav-bar .about a { background:url("images/about.svg") no-repeat 0px -2px transparent; }
+.nav-bar .education a { background:url("images/education.svg") no-repeat 0px -2px transparent; }
+.nav-bar .contact a { background:url("images/contact.svg") no-repeat 0px -2px transparent; }
