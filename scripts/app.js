@@ -40,7 +40,6 @@
                 document.getElementById("georgian").innerHTML = "Georgian College:";
                 document.getElementById("georgian1").innerHTML = "Interactive Web Design and Development - Current";
                 document.getElementById("georgian2").innerHTML = "Computer Programmer - 2015";
-                document.getElementById("georgian3").innerHTML = "Computer Programmer - 2015";
                 document.getElementById("georgian4").innerHTML = "Bartending 101 - 2005";
                 document.getElementById("delta").innerHTML = "Delta Training Program:";
                 document.getElementById("delta1").innerHTML = "Introduction to Management - 2009";
