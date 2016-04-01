@@ -1,0 +1,156 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+body{
+	background-color: #E8DAC3;
+	color: black;
+	display:flex;
+	/*flex-wrap:wrap;*/
+	height: 100vh;
+	min-width: 720px;
+	flex-direction: column;
+	margin: 20px;
+	padding: 10px;
+	
+	
+}
+
+main{
+	display: flex;
+  	flex-direction: row;
+  	flex-grow: 1;
+	font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	justify-content:space-around;
+	align-content:center;
+	
+}
+
+ul li{
+	text-decoration:none;
+	padding: 5px 0px;
+}
+
+header, footer{
+	padding: 2%;
+	font-family: 'Wire One', sans-serif;
+	font-size:16px;
+	font-weight:bold;
+}
+
+header p{
+	margin-left: 15%;
+}
+
+footer{
+	margin-top: 80%;
+	margin-left: 70%;
+}
+
+h1{
+	font-size:8em;
+	font-family: 'Oranienbaum', serif;
+	margin-top: -10px;
+	margin-bottom: -10px;
+	text-align: center;
+	color: #FF5428;
+	
+}
+
+h2{
+	font-size:2em;
+	font-family: 'Oranienbaum', serif;
+	margin-top: 10px;
+}
+
+.left_column{
+	order: 1;
+	width: 30%;
+	padding-left: 200px;
+}
+
+.right_column{
+	order: 2;
+	width: 30%;
+	padding-right: 200px;
+}
+
+#section1{
+	
+	order: 1;
+	
+}
+
+#section2{
+	
+	order:2;
+	margin-top: 50px;
+	border: 1px solid #FF323E;
+	box-shadow: 0 0 8px #999;
+	
+	
+}
+
+#section3{
+	border-top:10px solid #2EBC6A;
+	margin-bottom: 50px;
+	margin-top: 20px;
+}
+
+#section4{
+	border-top:10px solid #BF1579;
+	margin-bottom: 50px;
+	margin-top: 20px;
+}
+
+#section5{
+	border-top: 10px solid #27B3C9; 
+	margin-bottom: 50px;
+	margin-top: 20px;
+}
+
+img{
+	position: relative;
+}
+
+#section1 h2{
+	position: absolute;
+	top: 500px;
+	left: 360px;
+	width: 20px;
+	color: white;
+}
+
+#section1 p{
+	position:absolute;
+	top: 550px;
+	left: 360px;
+	/*width: 100%;*/
+	width: 10%;
+	color: white;
+	
+}
+
+#section2 > *{
+	margin-left: 50px;
+}
+
+#section3 a{
+	color: #2EBC6A;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+#section4 a{
+	color: #BF1579;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+#section5 a{
+	color: #27B3C9; 
+	font-weight:bold;
+	text-decoration:none;
+}
+
+
