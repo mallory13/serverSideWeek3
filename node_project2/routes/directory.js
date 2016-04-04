@@ -3,12 +3,14 @@ var router = express.Router();
 
 var mongoose = require('mongoose');
 var Directory = require('../models/directory');
+var Business = require('../models/business');
 var passport = require('passport');
 
 // set up the GET handler for the directories page
-router.get('/', isLoggedIn, function(req, res, next) {
+router.get('/', function(req, res, next) {
+    if(req.isAuthenticated()){
     // use the Business model to retrieve all businesses
-    Directory.find(function (err, directory) {
+    Business.find(function (err, business) {
         // if we have an error
         if (err) {
             console.log(err);
@@ -17,27 +19,39 @@ router.get('/', isLoggedIn, function(req, res, next) {
         else {
             // we got data back
             // show the view and pass the data to it
-            res.render('businesses/directory', {
+            res.render('businesses/business', {
 
                 title: 'Business Directory'
            
             });
         }
     });
+    }
+    else{
+        //redirect to login page
+        res.redirect('/auth/login');
+    }
 });
 
 // GET handler for add to display a blank form
-router.get('/add',isLoggedIn, function(req, res, next) {
+router.get('/add',function(req, res, next) {
+    if(req.isAuthenticated()){
+      
     res.render('businesses/add', {
         title: 'Add a New Business'
     });
+    }
+    else{
+        //redirect to login page
+        res.redirect('/auth/login');
+    }
 });
 
 // POST handler for add to process the form
 router.post('/add', function(req, res, next) {
 
     // save a new business using our Business model and mongoose
-    Directory.create( {
+    Business.create( {
             name: req.body.name,
             contact: req.body.contact,
             phone: req.body.phone,
@@ -46,17 +60,18 @@ router.post('/add', function(req, res, next) {
         }
     );
 
-    // redirect to main articles page
-    res.redirect('/directory');
+    // redirect to main business page
+    res.redirect('/business');
 });
 
 // GET handler for edit to show the populated form
-router.get('/:id', isLoggedIn, function(req, res, next) {
+router.get('/:id', function(req, res, next) {
+    if(req.isAuthenticated()){
    // create an id variable to store the id from the url
     var id = req.params.id;
 
     // look up the selected business
-    Directory.findById(id,  function(err, article) {
+    Business.findById(id,  function(err, business) {
        if (err) {
            console.log(err);
            res.end(err);
@@ -68,6 +83,11 @@ router.get('/:id', isLoggedIn, function(req, res, next) {
            });
        }
     });
+    }
+    else{
+        //redirect to login page
+        res.redirect('/auth/login');
+    }
 });
 
 // POST handler for edit to update the business
@@ -76,7 +96,7 @@ router.post('/:id', function(req, res, next) {
     var id = req.params.id;
 
     // fill the business object
-    var directory = new Directory( {
+    var business = new Business( {
         _id: id,
         name: req.body.name,
         contact: req.body.contact,
@@ -85,49 +105,45 @@ router.post('/:id', function(req, res, next) {
         website: req.body.website,
     });
 
-    // use mongoose and our Directory model to update
-    Directory.update( { _id: id }, directory,  function(err) {
+    
+    //update business directory with mongoose
+    Business.update( { _id: id }, business,  function(err) {
         if (err) {
             console.log(err)
             res.end(err);
         }
         else {
-            res.redirect('/directory');
+            res.redirect('/business');
         }
     });
 });
 
 // GET handler for delete using the business id parameter
-router.get('/delete/:id', isLoggedIn, function(req, res, next) {
+router.get('/delete/:id', function(req, res, next) {
+    if(req.isAuthenticated()){
    // grab the id parameter from the url
     var id = req.params.id;
 
     console.log('trying to delete');
 
-    Directory.remove({ _id: id }, function(err) {
+    Business.remove({ _id: id }, function(err) {
         if (err) {
             console.log(err);
             res.end(err);
         }
         else {
-            // show updated articles list
-            res.redirect('/directory');
+            // show updated directory of businesses 
+            res.redirect('/business');
         }
+    
     });
-});
-
-
-//auth check
-function isLoggedIn(req, res, next){
-    //is the user authenticated?
-    if(req.isAuthenticated()){
-        //if it is go to the next part of the request
-        return next;
     }
     else{
+        //redirect to login page
         res.redirect('/auth/login');
     }
-}
+});
+
 
 // make public
 module.exports = router;

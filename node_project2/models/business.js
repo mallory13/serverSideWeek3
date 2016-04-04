@@ -1,7 +1,7 @@
 // link to mongoose
 var mongoose = require('mongoose');
 
-// business schema is defined here
+// define the business schema
 var businessSchema = new mongoose.Schema({
    created: {
        type: Date,
@@ -36,7 +36,11 @@ var businessSchema = new mongoose.Schema({
         trim: true
        
     },
+    file: {
+        type: File,
+        default: ''   
+    }
 });
 
 // make it public
-module.exports = mongoose.model('Directory', directorySchema);
+module.exports = mongoose.model('Business', businessSchema);
