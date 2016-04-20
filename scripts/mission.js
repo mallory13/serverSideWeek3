@@ -4,20 +4,20 @@
     "use strict";
     // Instantiate new xhr object
     var request = new XMLHttpRequest();
-    request.open('GET', '../projects.json', true);
+    request.open('GET', '../mission.json', true);
     request.addEventListener('readystatechange', function() {
         // wait for file to finish loading
         if (request.readyState === 4 && request.status === 200) {
-            var projects = {};
+            var mission = {};
 
             // read in the json object
-            projects = JSON.parse(request.responseText);
+            mission = JSON.parse(request.responseText);
 
             // declare local paragraph array container
             var paragraphArray = [];
             
             // read in the paragraphs array from the json object
-            paragraphArray = projects.paragraphs;
+            paragraphArray = mission.paragraphs;
             
             // store length of the paragraphArray into a variable
             var paragraphArrayLength = paragraphArray.length;
